@@ -1,24 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import Box from '@mui/material/Box';
+import { CartProduct } from './types';
+import CircularProgress from '@mui/material/CircularProgress';
+import Home from './views/Home';
 import './App.css';
 
 function App() {
+  const [products, setProducts] = useState<CartProduct[]>([])
+  const [chargingData, setChargingData] = useState(true)
+
+  const getProducts = async () => {
+    try {
+      const data = await (await fetch('https://fakestoreapi.com/products')).json();
+      // const categories = data.map(item => {return item.category});
+      console.log(data);
+      // console.log("categories", categories)
+      setProducts(data)
+      setChargingData(false)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getProducts();
+  }, [])
+
+  const getTotalItems = () => null;
+
+  const handleAddToCart = () => null;
+
+  const handleRemoveFromCart = () => null;
+
+  if (chargingData) {
+    return (
+      <Box sx={{ display: 'flex' }}>
+        <CircularProgress />
+      </Box>
+    );
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      hello
+      <Home items={products} />
     </div>
   );
 }

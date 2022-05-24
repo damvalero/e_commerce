@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "typeRoots": [
+      "src/customTypings",
+
+    ],
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
