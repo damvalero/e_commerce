@@ -1,0 +1,29 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ------------colors------------ */
+  --clr-text: #445566;
+  --clr-main: #054aca;
+  --clr-border: #0984e3;
+  --clr-white: #f5f5f5;
+  --clr-white-basic: #ffffff;
+  --clr-error: #e84118;
+  --clr-orange: #fcae1e;
+  /* ------------font size------------ */
+  /*--font-big: 2rem; /*32px*/
+  --font-title: 1.75rem; /*28px*/
+  --font-subtitle: 1.25rem; /*20px*/
+  --font-text: 1.125rem; /*18px*/
+  --font-nav: 1rem; /*16px*/
+  --font-little: 0.875rem /*14px*/
+}
+
+.page-margin {
+    margin: 3%;
+  }

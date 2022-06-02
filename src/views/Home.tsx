@@ -12,7 +12,7 @@ interface ListProductsProps {
   items: CartProduct[],
 }
 
-const Home: React.FC<ListProductsProps> = (props) => {
+const ProductList: React.FC<ListProductsProps> = (props) => {
   console.log(props)
   return (
     <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} >
@@ -44,4 +44,4 @@ const Home: React.FC<ListProductsProps> = (props) => {
   )
 }
 
-export default Home;
+export default ProductList;
