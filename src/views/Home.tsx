@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import { CartProduct } from '../types';
+import { CartItemType } from '../types';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 interface ListProductsProps {
-  items: CartProduct[],
+  items: CartItemType[],
 }
 
 const Home: React.FC<ListProductsProps> = (props) => {

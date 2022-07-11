@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-    "typeRoots": [
-      "src/customTypings",
-
-    ],
     "target": "es6",
     "lib": [
       "dom",
